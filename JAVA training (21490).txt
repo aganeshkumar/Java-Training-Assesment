@@ -139,43 +139,6 @@ public class HelloWorld {
 7.
 package Java Training;
 
-public class Student {
-	
-	public String stdname;
-	public String stdid;
-	public String stdclass;
-	
-	public void print() {
-		System.out.println("stdname:Ganesh");
-		System.out.println("stdid:10");
-		System.out.println("stdclass:5");
-		
-		
-		
-	}
-
-}
-
-main file
-package Java Training;
-
-public class Main {
-
-	public static void main(String[] args) {
-		Student Sai = new Student();
-		Sai.stdname = "Ganesh";
-		Sai.stdid = "10";
-		Sai.stdclass = "5";
-		
-		Sai.print();
-		
-	}
-
-}
-		(or)
-
-package Java Training;
-
 public class Employee {
 	
 	public int empid;
@@ -263,78 +226,9 @@ public class Main1 {
 	}
 }
 
-		(or)
-
-package Java Training;
-public class Gst {
-	// initializing the Properties
-	int ProID;
-	 String ProName;
-	 double Price; 
-	double GST;
-	// creating tax method
-	public double ProPrice() {
-		return Price + GST;
-	}
-	public static void main(String[] args) {
-		//creating object for product class
-		 Gst p1 = new Gst();
-		 p1.ProID = 104;
-		 p1.ProName="Mobile";
-		 p1.Price=12500;
-		 p1.GST= p1.Price/18;
-		 // displaying the product information
-		 System.out.println(" the product ID is " + p1.ProID + " "+ "the product name is " + p1.ProName + " "+  "the price of phone is " +  p1.Price);
-		System.out.println( "the price of phone After adding the GST Tax Price  is " +  p1.ProPrice());
-		 
-	}
-
-}
-
 
 9.
-package Java Training;
 
-public class Iphone {
-	public String msize;
-	public String ipname;
-	
-	public void print() {
-		System.out.println("msizee: 64 Gb");
-		System.out.println("ipname:11s pro");
-		
-		System.out.println("msizee: 128 Gb");
-		System.out.println("ipname:12 pro");
-		
-	}
-
-}
-
-main file
-package Java Training;
-
-public class Main2 {
-
-	public static void main(String[] args) {
-		Iphone p1 = new Iphone();
-		p1.msize = "64 Gb";
-		p1.ipname = "11s pro";
-		
-		Iphone p2 = new Iphone();
-		p2.msize = "128 Gb";
-		p2.ipname = "12 pro";
-		
-		p1.print();
-		
-		p2.print();
-	
-		
-	}
-
-}
-
-
-	(or)
 package Java Training;
 
 public class Iphone1 {
