@@ -1,0 +1,573 @@
+1.
+package Java Training;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		//initializing numbers to compare  
+		int a=12, b=25, c=89;  
+		//comparing numbers, a with b and a with c   
+		//if both conditions are true, prints a  
+		if(a>=b && a>=c)  
+		System.out.println(a+" is the largest Number");  
+		//comparing b with a and b with c  
+		//if both conditions are true, prints b  
+		else if (b>=a && b>=c)  
+		System.out.println(b+" is the largest Number");  
+		else  
+		//prints c if the above conditions are false  
+		System.out.println(c+" is the largest number");  
+	}
+}
+
+
+
+2.
+package Java Training ;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		 int i;
+
+		 System.out.println ("The first 10 natural numbers are:\n");
+
+		 for (i=1;i<=10;i++)
+
+		 {      
+
+		  System.out.println (i);
+
+		 }
+
+		 System.out.println ("\n");
+
+		 }
+
+		 
+	}
+
+
+3.
+package Java Training;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		int number=2; 
+		int val=2,sum=0; 
+		for(int i=1;i<=2;i++) 
+		{ 
+		for(int j=1;j<=number;j++) 
+		{ 
+		sum=sum+val;  
+		}  
+		val=sum; 
+		 
+		sum=0;  
+		}  
+		System.out.println(val);  
+	}
+}
+
+4.
+package Java Training;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		int my_array[] = {1, 2, 3, 4, 5, 6};
+		int sum = 0;
+
+		for (int i : my_array)
+		    sum += i;
+		System.out.println("The sum is " + sum);
+
+		 }
+
+		 
+	}
+5.
+package Java Training;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		 int[] num = {1, 2, 3, 4, 5};
+		    int toFind = 3;
+		    boolean found = false;
+
+		    for (int n : num) {
+		      if (n == toFind) {
+		        found = true;
+		        break;
+		      }
+		    }
+		    
+		    if(found)
+		      System.out.println(toFind + " is found.");
+		    else
+		      System.out.println(toFind + " is not found.");
+
+		 }	 
+	}
+
+6.
+package Java Training;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		 //Initialize array  
+        int [] arr = new int [] {1, 2, 3, 4, 5};  
+        System.out.println("Original array: ");  
+        for (int i = 0; i < arr.length; i++) {  
+            System.out.print(arr[i] + " ");  
+        }  
+        System.out.println();  
+        System.out.println("Array in reverse order: ");  
+        //Loop through the array in reverse order  
+        for (int i = arr.length-1; i >= 0; i--) {  
+            System.out.print(arr[i] + " ");  
+
+		 }	 
+	}
+}
+
+
+
+7.
+package Java Training;
+
+public class Student {
+	
+	public String stdname;
+	public String stdid;
+	public String stdclass;
+	
+	public void print() {
+		System.out.println("stdname:Ganesh");
+		System.out.println("stdid:10");
+		System.out.println("stdclass:5");
+		
+		
+		
+	}
+
+}
+
+main file
+package Java Training;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Student Sai = new Student();
+		Sai.stdname = "Ganesh";
+		Sai.stdid = "10";
+		Sai.stdclass = "5";
+		
+		Sai.print();
+		
+	}
+
+}
+		(or)
+
+package Java Training;
+
+public class Employee {
+	
+	public int empid;
+	public String empname;
+	public int empsal;
+	private int salcal;
+	
+	public void display() {
+		
+		System.out.println(empid);
+		System.out.println(empname);
+		System.out.println(empsal);
+	}
+	public void salcal() {
+		salcal= empsal-9000;
+		System.out.println(salcal);
+		
+	}
+	public class manager extends Employee{
+		
+		public void salcal() {
+			salcal= empsal-9000;
+			System.out.println(salcal);
+		}
+	}
+	public class developer extends Employee{
+		
+		public void salcal() {
+			salcal= empsal-9000;
+			System.out.println(salcal);
+		}
+	}
+	public class tester extends Employee{
+		
+		public void salcal() {
+			salcal= empsal-8000;
+			System.out.println(salcal);
+		}
+	}
+	public static void main(String[] args) {
+		 Employee emp = new Employee();
+		 tester tes=emp.new tester();
+		 emp.empid=01;
+		 emp.empname="Ganesh";
+		 emp.empsal=23000;
+		 emp.salcal();
+		 emp.display();
+		 
+		
+	}
+
+}
+
+
+8.
+package Java Training;
+
+public class Product {
+	public String proname;
+	public String proid;
+	public String proprice;
+	public String propricegst;
+	
+	public void print() {
+		System.out.println("proname:Sonata Watch");
+		System.out.println("proid:45");
+		System.out.println("proprice incl GST%18 :4000+720= 4720");
+	}
+
+}
+main file
+package Java Training;
+
+public class Main1 {
+
+	public static void main(String[] args) {
+		Product Watch = new Product();
+		Watch.proname = "Sonata";
+		Watch.proid = "45";
+		Watch.proprice = "4000";
+		Watch.propricegst ="gst%18+proprice";
+		
+		Watch.print();
+		
+	}
+}
+
+		(or)
+
+package Java Training;
+public class Gst {
+	// initializing the Properties
+	int ProID;
+	 String ProName;
+	 double Price; 
+	double GST;
+	// creating tax method
+	public double ProPrice() {
+		return Price + GST;
+	}
+	public static void main(String[] args) {
+		//creating object for product class
+		 Gst p1 = new Gst();
+		 p1.ProID = 104;
+		 p1.ProName="Mobile";
+		 p1.Price=12500;
+		 p1.GST= p1.Price/18;
+		 // displaying the product information
+		 System.out.println(" the product ID is " + p1.ProID + " "+ "the product name is " + p1.ProName + " "+  "the price of phone is " +  p1.Price);
+		System.out.println( "the price of phone After adding the GST Tax Price  is " +  p1.ProPrice());
+		 
+	}
+
+}
+
+
+9.
+package Java Training;
+
+public class Iphone {
+	public String msize;
+	public String ipname;
+	
+	public void print() {
+		System.out.println("msizee: 64 Gb");
+		System.out.println("ipname:11s pro");
+		
+		System.out.println("msizee: 128 Gb");
+		System.out.println("ipname:12 pro");
+		
+	}
+
+}
+
+main file
+package Java Training;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+		Iphone p1 = new Iphone();
+		p1.msize = "64 Gb";
+		p1.ipname = "11s pro";
+		
+		Iphone p2 = new Iphone();
+		p2.msize = "128 Gb";
+		p2.ipname = "12 pro";
+		
+		p1.print();
+		
+		p2.print();
+	
+		
+	}
+
+}
+
+
+	(or)
+package Java Training;
+
+public class Iphone1 {
+	
+	int memorysize;
+	
+	void price() {
+		if(memorysize==32) {
+			System.out.println("Price is 15000");
+		}
+		
+		else if (memorysize==64) {
+			System.out.println("Price is 25000");
+			
+		}
+
+		else if (memorysize==128) {
+			System.out.println("Price is 40000");
+		}
+		
+	}
+		
+
+	public static void main(String[] args) {
+		
+		Iphone1 Ip=new Iphone1();
+		Ip.memorysize=64;
+		Ip.price();
+		
+	}
+
+}
+
+
+
+10.
+package Java Training;
+
+public class Employee {
+	
+	public int empno;
+	public String empname;
+	public int salcal;
+	
+	public void display() {
+		System.out.println("display the empno");
+	}
+	
+	public void salcal() {
+		System.out.println("calculate the salary");
+	}
+
+}
+
+
+package Java Training;
+
+public class Manager extends Employee {
+	
+	public String empname;
+	public int calsal;
+	
+	public void display() {
+		System.out.println("Calculate the salary");
+		
+	}
+
+}
+
+
+package Java Training;
+
+public class Developer extends Manager {
+	
+	public String empname;
+	public int calsal;
+	
+	public void display() {
+		System.out.println("Salary calculation of emp");
+		
+
+}
+	
+}
+
+package Java Training;
+
+public class Tester extends Developer {
+	
+	public String empname;
+	public int calsal;
+	
+	public void display() {
+		System.out.println("Cal Emp Salary");
+		
+
+}
+
+}
+
+main
+package Java Training;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Manager m1 = new Manager();
+		m1.display();
+		
+		Developer d1 = new Developer();
+		d1.display();
+		
+		Tester t1 = new Tester();
+		t1.display();
+		
+		
+	}
+
+}
+
+
+11.
+package Java Training;
+
+public abstract class Shape {
+	private double height;  // To hold height.
+	   private double width;  //To hold width or base
+
+	   // Set height and width
+	   public void setValues(double height, double width)
+	   {
+	      this.height = height;
+	      this.width = width;
+	   }
+
+	   //Get height
+	   public double getHeight() 
+	   {
+	       return height;
+	   }
+	     
+	   //Get width
+	   public double getWidth() 
+	   {
+	       return width;
+	   } 
+
+	   // The getArea method is abstract.   
+	   // It must be overridden in a subclass. 
+
+	   public abstract double getArea();
+	}
+
+package Java Training;
+
+public class Triangle extends Shape
+{ 
+    //Calculate and return area of triangle
+    public double getArea() 
+    {
+        return (getHeight() * getWidth()) / 2;
+    }
+}       
+
+package Java Training;
+
+public class Square extends Shape
+{
+    //Calculate and return area of Square
+    public double getArea()
+    {
+        return getHeight() * getWidth();
+    }
+}
+
+package Java Training;
+
+public class Rectangle extends Shape
+{
+    //Calculate and return area of rectangle
+    public double getArea()
+    {
+        return getHeight() * getWidth();
+    }
+}
+main
+
+package Java Training;
+
+public class AbstractDemo {
+
+	public static void main(String[] args) {
+		
+		Shape shape;
+        Rectangle rect = new Rectangle();
+        
+        shape = rect;
+        shape.setValues(90, 5);
+        
+        //Display the area of rectangle
+        System.out.println("Area of rectangle : " + shape.getArea());
+        
+        // assign subclass reference to subclass variable
+        Triangle tri = new Triangle();
+        
+        // shape points to the object         
+        shape = tri;
+        
+        // Set data in Triangle's object         
+        shape.setValues(45,3);
+        
+        //Display the area of triangle        
+        System.out.println("Area of triangle : " + shape.getArea());
+        
+        // assign subclass reference to subclass variable
+        Rectangle rect1 = new Rectangle();
+        
+        // shape points to the object 
+        shape = rect1;
+
+        // Set data in Square object 
+        shape.setValues(50, 5);
+        
+        //Display the area of square
+        System.out.println("Area of square : " + shape.getArea());
+        
+        // assign subclass reference to subclass variable
+        Square squ1 = new Square();
+        
+        // shape points to the object        
+        shape = squ1;
+       
+	}
+
+}
